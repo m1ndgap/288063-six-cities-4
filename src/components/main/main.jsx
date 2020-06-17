@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const Main = (props) => {
 
-  const {places, descriptions} = props;
+  const {places, descriptions, onHeaderClick} = props;
   const locations = [];
 
   for (let [value] of descriptions.entries()) {
@@ -50,7 +50,9 @@ const Main = (props) => {
           <div className="container">
             <div className="header__wrapper">
               <div className="header__left">
-                <a className="header__logo-link header__logo-link--active">
+                <a
+                  onClick={onHeaderClick}
+                  className="header__logo-link header__logo-link--active">
                   <img className="header__logo" src="img/logo.svg" alt="6 cities logo" width="81" height="41" />
                 </a>
               </div>
@@ -143,6 +145,7 @@ const Main = (props) => {
 Main.propTypes = {
   places: PropTypes.number.isRequired,
   descriptions: PropTypes.array.isRequired,
+  onHeaderClick: PropTypes.func.isRequired,
 };
 
 export default Main;
