@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import Main from "../main/main.jsx";
 
+const onHeaderClick = () => {};
+
 const App = (props) => {
   const {places, descriptions} = props;
 
@@ -10,6 +12,7 @@ const App = (props) => {
     <Main
       places = {places}
       descriptions = {descriptions}
+      onHeaderClick = {onHeaderClick}
     />
   );
 };
