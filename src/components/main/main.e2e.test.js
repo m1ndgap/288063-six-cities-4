@@ -14,11 +14,11 @@ describe(`Main component`, () => {
     const headerClick = jest.fn();
 
     const main = shallow(
-      <Main
-        places = {666}
-        descriptions={descriptions}
-        onHeaderClick={headerClick}
-      />
+        <Main
+          places = {666}
+          descriptions={descriptions}
+          onHeaderClick={headerClick}
+        />
     );
 
     const header = main.find(`a.header__logo-link`);
